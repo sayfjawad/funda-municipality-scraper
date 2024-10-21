@@ -1,0 +1,157 @@
+openapi: 3.0.1
+info:
+  version: 1.0.0
+  title: Funda API
+  description: API for accessing Funda listings.
+
+paths:
+  /api/funda/search/municipalities: # New endpoint
+    get:
+      summary: Retrieve a list of municipalities.
+      description: Fetches a list of municipalities with their names and URLs.
+      responses:
+        200:
+          description: A list of municipalities with names and URLs.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Municipality'
+        500:
+          description: Server error or issues while fetching data.
+  /api/funda/search/area/{areaName}:
+    get:
+      summary: Retrieve listings for a specified area.
+      description: Fetches listings for a given area based on desired type of listing (e.g., buy or rent) and number of pages.
+      parameters:
+        - name: areaName
+          in: path
+          description: Name of the area to search for listings.
+          required: true
+          schema:
+            type: string
+        - name: numberPages
+          in: query
+          description: Number of pages of listings to retrieve.
+          required: false
+          schema:
+            type: integer
+            default: 1
+        - name: wantTo
+          in: query
+          description: Type of listing desired.
+          required: false
+          schema:
+            type: string
+            enum:
+              - BUY
+              - RENT
+            default: BUY
+      responses:
+        200:
+          description: A list of listings for sale in the specified area.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/ListingForSale'
+        500:
+          description: Server error or issues while fetching data.
+
+components:
+  schemas:
+    ListingForSale:
+      type: object
+      properties:
+        link:
+          type: string
+          description: Link to the listing.
+        price:
+          type: string
+          description: Price of the listing.
+        address:
+          type: string
+          description: Address of the listing.
+        description:
+          type: string
+          description: Description of the listing.
+        listSince:
+          type: string
+          description: Listing date.
+        zipCode:
+          type: string
+          description: ZIP code of the listing.
+        size:
+          type: string
+          description: Size of the property.
+        year:
+          type: string
+          description: Year of the property.
+        livingArea:
+          type: string
+          description: Living area of the property.
+        kindOfHouse:
+          type: string
+          description: Type or kind of house.
+        buildingType:
+          type: string
+          description: Building type of the listing.
+        numOfRooms:
+          type: string
+          description: Number of rooms in the listing.
+        numOfBathrooms:
+          type: string
+          description: Number of bathrooms in the listing.
+        layout:
+          type: string
+          description: Layout description of the listing.
+        energyLabel:
+          type: string
+          description: Energy label of the listing.
+        insulation:
+          type: string
+          description: Insulation details of the listing.
+        heating:
+          type: string
+          description: Heating details of the listing.
+        ownership:
+          type: string
+          description: Ownership details of the listing.
+        exteriors:
+          type: string
+          description: Exterior details of the listing.
+        parking:
+          type: string
+          description: Parking details of the listing.
+        neighborhoodName:
+          type: string
+          description: Name of the neighborhood where the listing is located.
+        dateList:
+          type: string
+          description: Date the listing was listed.
+        dateSold:
+          type: string
+          description: Date the listing was sold.
+        term:
+          type: string
+          description: Term details of the listing.
+        priceSold:
+          type: string
+          description: Sold price of the listing.
+        lastAskPrice:
+          type: string
+          description: Last ask price of the listing.
+        lastAskPricePerSquareMeter:
+          type: string
+          description: Last ask price per square meter of the listing.
+    Municipality:
+      type: object
+      properties:
+        name:
+          type: string
+          description: Name of the municipality.
+        url:
+          type: string
+          description: URL of the municipality.

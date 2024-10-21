@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tor-deployment
+spec:
+  replicas: 10
+  selector:
+    matchLabels:
+      app: tor
+  template:
+    metadata:
+      labels:
+        app: tor
+    spec:
+      containers:
+        - name: tor
+          image: tor-container
+          ports:
+            - containerPort: 9050

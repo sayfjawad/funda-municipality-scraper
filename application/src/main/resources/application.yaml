@@ -1,0 +1,27 @@
+logging:
+  level:
+    org.springframework: ERROR
+    nl.multicode.scraper: INFO
+
+springdoc:
+  api-docs:
+    path: /apispecs/api-specs.yaml
+  swagger-ui:
+    path: /swagger-ui.html
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/funda?allowPublicKeyRetrieval=true&useSSL=false
+    username: placeholder
+    password: placeholder
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+
+scheduler:
+  municipalityCron: "0 42 4 * * *"
+
+
+
+

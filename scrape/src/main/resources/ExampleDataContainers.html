@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>example data containers</title>
+</head>
+<body>
+
+<script data-object-map-config type="application/json">
+  {
+    "lat": 52.02542,
+    "lng": 5.044962,
+    "markerTitle": "Pandora 3",
+    "markerUrl": "https://assets.fstatic.nl/master-59991/assets/components/object-map/marker.png",
+    "kadasterBgUrl": "//service.pdok.nl/brt/achtergrondkaart/wmts/v2_0/standaard/EPSG:3857/{z}/{x}/{y}.png",
+    "kadasterPandenUrl": "//service.pdok.nl/lv/bag/wms/v2_0?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&FORMAT=image/png&STYLES=default&TRANSPARENT=TRUE&LAYERS=pand&WIDTH=256&HEIGHT=256&CRS=CRS:84&BBOX={bbox}",
+    "kadasterPercelenUrl": "//geodata.nationaalgeoregister.nl/kadastralekaart/wms/v4_0?service=WMS&version=1.3.0&request=GetMap&LAYERS=perceel,bebouwing&FORMAT=image/png&WIDTH=256&HEIGHT=256&CRS=CRS:84&TRANSPARENT=TRUE&BBOX={bbox}",
+    "baseTravelTimeUrl": "/search/traveltimepolygons/getpolygons/",
+    "baseRouteUrl": "/search/traveltimeroute/getroute/",
+    "baseJsErrorUrl": "/jserror/log/",
+    "defaultMapType": "roadmap",
+    "kadasterAttributionText": "Map data Kadaster CC-BY 4.0"
+  }
+</script>
+
+<script data-media-viewer-foto360-items type="application/json">
+  {
+    "entree1": "/panorama/42206367/178456150/",
+    "entree2": "/panorama/42206367/178456151/",
+    "entree3": "/panorama/42206367/178456152/",
+    "hal": "/panorama/42206367/178456153/",
+    "woonkamer1": "/panorama/42206367/178456154/",
+    "woonkamer2": "/panorama/42206367/178456156/",
+    "keuken": "/panorama/42206367/178456157/",
+    "overloop": "/panorama/42206367/178456158/",
+    "slaapkamer": "/panorama/42206367/178456159/",
+    "badkamer": "/panorama/42206367/178456160/",
+    "kantoor": "/panorama/42206367/178456161/",
+    "inloopkast": "/panorama/42206367/178456162/",
+    "balkon": "/panorama/42206367/178456163/"
+  }
+</script>
+
+
+<div data-vue-container>
+  <app-contact-broker-modal address="Pandora 3, 3402 HW IJsselstein"
+                            base-url-assets="https://assets.fstatic.nl/master-59991"
+                            closing-time="Morgen bereikbaar vanaf 6:00"
+                            locale="nl"
+                            office-name="REINERIE GARANTIEMAKELAARS"
+                            phone-number="030-6884455"
+                            price="€ 475.000 k.k.">
+  </app-contact-broker-modal>
+</div>
+
+<script data-tracking-properties type="application/ld+json">{
+  "global_id": 6851904,
+  "main_broker_id": 17194,
+  "main_broker_association": "nvm",
+  "listing_type": "apartment",
+  "listing_status": "beschikbaar",
+  "listing_products": [
+    "floorplan",
+    "photo360",
+    "video"
+  ],
+  "listing_askingprice": 475000,
+  "listing_photos_total": 46,
+  "listing_postal_code": "3402HW",
+  "listing_house_no": 3,
+  "listing_place": "IJsselstein",
+  "brokers": [
+    {
+      "broker_id": 17194,
+      "broker_association": "nvm"
+    }
+  ],
+  "broker_association": "nvm",
+  "broker_id": 17194
+}</script>
+
+
+<script data-test-gtm-script>
+  // Fill GtmDataLayer with data
+  gtmDataLayer = window.gtmDataLayer || [];
+  gtmDataLayer.push({
+    'userId': '2271fe6d-30e7-4e29-a793-cbf2944f3e82',
+    'isAnonymous': 'false',
+    'language': 'nl',
+    'seriousness': '1|false',
+    'pagetype': 'object',
+    'hashedemail': 'ed027c06e40d',
+    'hashedemailext': 'c20602306d289bfb3e2389928e9697e99852993ad08efb9c45b3d10fab63f1e8',
+    'allowPersonalisatie': 'true',
+    'allowAdvertenties': 'true',
+    'allowAnalytisch': 'true',
+    'allowFunctioneel': 'true',
+    'explicitAcceptOfCookies': 'true',
+    'makelaarVestigingnummer': '17194',
+    'makelaarsvereniging': 'Nvm',
+    'brochure': 'False',
+    'foto360': 'True',
+    'plattegrond': 'True',
+    'toppositie': 'False',
+    'video': 'True',
+    'promolabel': 'False',
+    'inbeeld': 'False',
+    'veiling': 'False',
+    'veilingproduct': 'False',
+    'openhuizendagpromotiepakket': 'False',
+    'soortaanbod': 'koop',
+    'objectType': 'Appartement',
+    'soortObject': 'Benedenwoning (appartement)',
+    'aangebodensinds': '13 augustus 2023',
+    'koopprijs': '475000',
+    'aantalfotos': '46',
+    'globalId': '6851904',
+    'soortPlaatsing': 'Basis',
+    'plaats': 'IJsselstein',
+    'postcode': '3402HW',
+    'provincie': 'Utrecht',
+    'flex': 'False',
+    'functie_context': 'koop',
+  });
+
+  // Initialize Google Tag Manager
+  (function (w, d, s, l, i) {
+    w[l] = w[l] || [];
+    w[l].push({
+      'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+    });
+    var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+    j.async = true;
+    j.src =
+        '//www.googletagmanager.com/gtm.js?id=' + i + dl;
+    f.parentNode.insertBefore(j, f);
+  })(window, document, 'script', 'gtmDataLayer', 'GTM-NPB6HG');
+</script>
+
+
+<script data-tracking-global-properties type="application/ld+json">{
+  "listing_offering_type": "koop",
+  "content_tags": [
+    "v1"
+  ],
+  "site": "funda",
+  "site_section": "listings",
+  "site_locale": "nl",
+  "channel": "web",
+  "page_type": "listing",
+  "logged_in": true,
+  "full_path": "/koop/ijsselstein/appartement-42206367-pandora-3/",
+  "full_url": "http://beta.funda.nl/koop/ijsselstein/appartement-42206367-pandora-3/",
+  "hashedemail": "c20602306d289bfb3e2389928e9697e99852993ad08efb9c45b3d10fab63f1e8",
+  "hashedemailsalted": "ed027c06e40d",
+  "funda_user_id": "2271fe6d-30e7-4e29-a793-cbf2944f3e82"
+}</script>
+
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org/",
+    "@type": [
+      "Apartment",
+      "Product"
+    ],
+    "id": "https://www.funda.nl/koop/ijsselstein/appartement-42206367-pandora-3/#funda",
+    "url": "https://www.funda.nl/koop/ijsselstein/appartement-42206367-pandora-3/",
+    "name": "Pandora 3",
+    "description": "Appartement te koop: Pandora 3 3402 HW IJsselstein [funda]",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Pandora 3",
+      "addressLocality": "IJsselstein",
+      "addressRegion": "Utrecht"
+    },
+    "offers": {
+      "@type": "Offer",
+      "priceCurrency": "EUR",
+      "price": "475000"
+    },
+    "photo": [
+      {
+        "@type": "ImageObject",
+        "contentUrl": "https://cloud.funda.nl/valentina_media/178/662/352_1440x960.jpg"
+      },
+      {
+        "@type": "ImageObject",
+        "contentUrl": "https://cloud.funda.nl/valentina_media/178/662/354_1440x960.jpg"
+      },
+      {
+        "@type": "ImageObject",
+        "contentUrl": "https://cloud.funda.nl/valentina_media/178/662/353_1440x960.jpg"
+      },
+      {
+        "@type": "ImageObject",
+        "contentUrl": "https://cloud.funda.nl/valentina_media/178/662/357_1440x960.jpg"
+      },
+      {
+        "@type": "ImageObject",
+        "contentUrl": "https://cloud.funda.nl/valentina_media/178/662/355_1440x960.jpg"
+      },
+      {
+        "@type": "ImageObject",
+        "contentUrl": "https://cloud.funda.nl/valentina_media/178/662/356_1440x960.jpg"
+      }
+    ],
+    "category": ""
+  }
+</script>
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org/",
+    "@type": [
+      "Apartment",
+      "Product"
+    ],
+    "id": "https://www.funda.nl/koop/ijsselstein/appartement-42206367-pandora-3/#funda",
+    "url": "https://www.funda.nl/koop/ijsselstein/appartement-42206367-pandora-3/",
+    "name": "Pandora 3",
+    "description": "Appartement te koop: Pandora 3 3402 HW IJsselstein [funda]",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Pandora 3",
+      "addressLocality": "IJsselstein",
+      "addressRegion": "Utrecht"
+    },
+    "offers": {
+      "@type": "Offer",
+      "priceCurrency": "EUR",
+      "price": "475000"
+    },
+    "photo": [
+      {
+        "@type": "ImageObject",
+        "contentUrl": "https://cloud.funda.nl/valentina_media/178/662/352_1440x960.jpg"
+      },
+      {
+        "@type": "ImageObject",
+        "contentUrl": "https://cloud.funda.nl/valentina_media/178/662/354_1440x960.jpg"
+      },
+      {
+        "@type": "ImageObject",
+        "contentUrl": "https://cloud.funda.nl/valentina_media/178/662/353_1440x960.jpg"
+      },
+      {
+        "@type": "ImageObject",
+        "contentUrl": "https://cloud.funda.nl/valentina_media/178/662/357_1440x960.jpg"
+      },
+      {
+        "@type": "ImageObject",
+        "contentUrl": "https://cloud.funda.nl/valentina_media/178/662/355_1440x960.jpg"
+      },
+      {
+        "@type": "ImageObject",
+        "contentUrl": "https://cloud.funda.nl/valentina_media/178/662/356_1440x960.jpg"
+      }
+    ],
+    "category": ""
+  }
+</script>
+
+<meta itemprop=""/>
+
+
+<script data-advertisement-targeting type="application/ld+json">
+  {
+    "cat42": "0",
+    "taal": "nl",
+    "loggedin": "true",
+    "cat1": "utrecht",
+    "cat2": "ijsselstein",
+    "cat3": "3402hw",
+    "cat4": "3",
+    "cat6": "475000",
+    "cat7": "appartement",
+    "cat8": "5",
+    "cat9": "114",
+    "cat10": "a",
+    "cat11": "17194",
+    "cat13": "bestaandebouw",
+    "cat20": "nieuw",
+    "cat24": "0",
+    "cat26": "nvm",
+    "cat28": "0",
+    "cat29": "2007",
+    "cat30": "450000",
+    "cat33": "koop",
+    "cat35": "42206367",
+    "cat36": "0",
+    "cat38": "gemeenteijsselstein",
+    "cat39": "ijsselveldwest",
+    "cat43": "0",
+    "cat44": "0",
+    "postcode": "3402hw",
+    "plaats": "ijsselstein",
+    "provincie": "utrecht",
+    "huisnummer": "3",
+    "woonoppervlakte": "114",
+    "vraagprijs": "475000",
+    "aantalkamers": "5",
+    "soortobject": "appartement",
+    "energieklasse": "a",
+    "hoofdaanbieder": "17194",
+    "bouwvorm": "bestaandebouw",
+    "bedrijfsruimte": "false",
+    "cvketel": "nieuw",
+    "branchevereniging": "nvm",
+    "dakterras": "false",
+    "tuin": "false",
+    "balkon": "true",
+    "soortaanbieding": "koop",
+    "tinyid": "42206367",
+    "vraagprijsrange": "450000",
+    "bouwjaar": "2007",
+    "openhuis": "false",
+    "gemeente": "ijsselstein",
+    "buurt": "ijsselveldwest",
+    "monumentalestatus": "false",
+    "rijksmonument": "false",
+    "soortaanbod": "koop",
+    "energiezuinig": "true",
+    "kluswoning": "false",
+    "adgroup": "a",
+    "status": "beschikbaar",
+    "zonnepanelen": "false",
+    "environment": "production"
+  }
+</script>
+
+<script data-object-map-config type="application/json">
+  {
+    "lat": 52.02542,
+    "lng": 5.044962,
+    "markerTitle": "Pandora 3",
+    "markerUrl": "https://assets.fstatic.nl/master-59991/assets/components/object-map/marker.png",
+    "kadasterBgUrl": "//service.pdok.nl/brt/achtergrondkaart/wmts/v2_0/standaard/EPSG:3857/{z}/{x}/{y}.png",
+    "kadasterPandenUrl": "//service.pdok.nl/lv/bag/wms/v2_0?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&FORMAT=image/png&STYLES=default&TRANSPARENT=TRUE&LAYERS=pand&WIDTH=256&HEIGHT=256&CRS=CRS:84&BBOX={bbox}",
+    "kadasterPercelenUrl": "//geodata.nationaalgeoregister.nl/kadastralekaart/wms/v4_0?service=WMS&version=1.3.0&request=GetMap&LAYERS=perceel,bebouwing&FORMAT=image/png&WIDTH=256&HEIGHT=256&CRS=CRS:84&TRANSPARENT=TRUE&BBOX={bbox}",
+    "baseTravelTimeUrl": "/search/traveltimepolygons/getpolygons/",
+    "baseRouteUrl": "/search/traveltimeroute/getroute/",
+    "baseJsErrorUrl": "/jserror/log/",
+    "defaultMapType": "roadmap",
+    "kadasterAttributionText": "Map data Kadaster CC-BY 4.0"
+  }
+</script>
+
+</body>
+</html>
