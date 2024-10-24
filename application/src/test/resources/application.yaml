@@ -9,33 +9,5 @@ springdoc:
   swagger-ui:
     path: /swagger-ui.html
 
-spring:
-  datasource:
-    url: jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
-    username: sa
-    password:
-  jpa:
-    show-sql: true
-    hibernate:
-      ddl-auto: create-drop
-    properties:
-      hibernate:
-        dialect: org.hibernate.dialect.H2Dialect
-
-
-
-config:
-  base_url: https://www.funda.nl/en
-  search_buy_uri: /zoeken/koop/?selected_area=["%s"]
-  search_rent_uri: /zoeken/huur/?selected_area=["%s"]
-  find_in_past_request_param: "&availability=\"unavailable\""
-  municipalities_uri: /koop/bladeren/heel-nederland/?actpnl=Plaatsnaam
-  css_selector:
-    listing_data_tracking_properties: "script[type=application/ld+json][data-tracking-global-properties]"
-    listing_script_selector_advertisement_targeting: "script[type=application/ld+json][data-advertisement-targeting]"
-    listing_script_gtm_test: "script[data-test-gtm-script]"
-    listing_script_gtm_test_pattern: "gtmDataLayer\\.push\\((\\{[\\s\\S]*?\\})\\);"
-    pagination_selector: "ul.pagination > li"
-
 
 

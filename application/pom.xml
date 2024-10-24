@@ -18,7 +18,6 @@
         <groupId>org.springframework.boot</groupId>
         <version>3.0.5</version>
       </plugin>
-
       <plugin>
         <artifactId>jib-maven-plugin</artifactId>
         <configuration>
@@ -35,6 +34,36 @@
       </plugin>
     </plugins>
   </build>
+  <profiles>
+    <profile>
+      <id>native</id>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>org.graalvm.buildtools</groupId>
+            <artifactId>native-maven-plugin</artifactId>
+            <extensions>true</extensions>
+            <executions>
+              <execution>
+                <id>build-native</id>
+                <goals>
+                  <goal>compile-no-fork</goal>
+                </goals>
+                <phase>package</phase>
+              </execution>
+              <execution>
+                <id>test-native</id>
+                <goals>
+                  <goal>test</goal>
+                </goals>
+                <phase>test</phase>
+              </execution>
+            </executions>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+  </profiles>
 
   <dependencies>
     <dependency>
@@ -75,17 +104,7 @@
       <version>0.0.1-SNAPSHOT</version>
     </dependency>
     <dependency>
-      <artifactId>services</artifactId>
-      <groupId>nl.multicode</groupId>
-      <version>0.0.1-SNAPSHOT</version>
-    </dependency>
-    <dependency>
       <artifactId>rest-ui</artifactId>
-      <groupId>nl.multicode</groupId>
-      <version>0.0.1-SNAPSHOT</version>
-    </dependency>
-    <dependency>
-      <artifactId>database</artifactId>
       <groupId>nl.multicode</groupId>
       <version>0.0.1-SNAPSHOT</version>
     </dependency>
@@ -98,11 +117,6 @@
     <dependency>
       <artifactId>hibernate-validator</artifactId>
       <groupId>org.hibernate.validator</groupId>
-    </dependency>
-    <dependency>
-      <groupId>com.h2database</groupId>
-      <artifactId>h2</artifactId>
-      <scope>test</scope>
     </dependency>
   </dependencies>
   <properties>

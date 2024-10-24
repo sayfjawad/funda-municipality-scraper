@@ -18,25 +18,38 @@
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-web</artifactId>
     </dependency>
+    <!-- https://mvnrepository.com/artifact/io.swagger.core.v3/swagger-jaxrs2-jakarta -->
+    <dependency>
+      <groupId>io.swagger.core.v3</groupId>
+      <artifactId>swagger-jaxrs2-jakarta</artifactId>
+      <version>2.2.25</version>
+      <scope>runtime</scope>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/io.swagger.core.v3/swagger-integration-jakarta -->
+    <dependency>
+      <groupId>io.swagger.core.v3</groupId>
+      <artifactId>swagger-integration-jakarta</artifactId>
+    </dependency>
+
     <dependency>
       <groupId>org.openapitools</groupId>
       <artifactId>jackson-databind-nullable</artifactId>
     </dependency>
     <dependency>
       <groupId>io.swagger.core.v3</groupId>
-      <artifactId>swagger-annotations</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>javax.annotation</groupId>
-      <artifactId>javax.annotation-api</artifactId>
+      <artifactId>swagger-annotations-jakarta</artifactId>
     </dependency>
     <dependency>
       <groupId>com.google.code.gson</groupId>
       <artifactId>gson</artifactId>
     </dependency>
     <dependency>
-      <groupId>javax.validation</groupId>
-      <artifactId>validation-api</artifactId>
+      <groupId>jakarta.annotation</groupId>
+      <artifactId>jakarta.annotation-api</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>jakarta.validation</groupId>
+      <artifactId>jakarta.validation-api</artifactId>
     </dependency>
   </dependencies>
 
@@ -46,7 +59,7 @@
       <plugin>
         <groupId>org.openapitools</groupId>
         <artifactId>openapi-generator-maven-plugin</artifactId>
-        <version>6.5.0</version>
+        <version>7.9.0</version>
         <executions>
           <execution>
             <id>cpo_codegen</id>
@@ -63,6 +76,7 @@
                 <additionalModelTypeAnnotations>@lombok.Builder @lombok.NoArgsConstructor
                   @lombok.AllArgsConstructor
                 </additionalModelTypeAnnotations>
+                <useJakartaEe>true</useJakartaEe>
               </configOptions>
               <modelPackage>scraper.generated.model
               </modelPackage>

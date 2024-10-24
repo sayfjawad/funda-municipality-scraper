@@ -16,8 +16,6 @@ public class FundaMunicipalityScraperService implements StaticScraperService<Mun
 
     @Override
     public List<Municipality> scrape() throws IOException {
-
         return municipalityStaticScraper.scrape();
     }
 }
-

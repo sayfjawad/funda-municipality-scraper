@@ -3,18 +3,18 @@ package nl.multicode.scraper.model.search;
 import java.util.Date;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
-import lombok.Getter;
+import lombok.Data;
 
-@Getter
+@Data
 @Builder
 @AllArgsConstructor
 public class Municipality {
 
-    private final   Date date;
+    private Date date;
 
-    private final  String name;
+    private String name;
 
-    private final  String url;
+    private String url;
 
-    private final  int nrOfListings;
+    private int nrOfListings;
 }
